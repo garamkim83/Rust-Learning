@@ -5,7 +5,7 @@ fn main() {
 
     println!("Please input your guess.");
 
-    let mut guess = String::new();
+    let mut guess = String::new(); //mut:  가변의
 
     io::stdin()
         .read_line(&mut guess)
