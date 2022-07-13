@@ -16,11 +16,15 @@ fn main() {
     io::stdin()
         .read_line(&mut guess)
         .expect("Failed to read line");
+    
+    // 타입 변경
+    let guess:u32=guess.trim().parse().expect("Please type a number!");
 
     println!("You guessed: {}", guess);
-    match guess.cmp(&secret_number){
-        Ordering::Less=>println!("Too small!"), //세미콜론 아님
+    
+    match guess.cmp(&secret_number){                // 숫자 비교
+        Ordering::Less=>println!("Too small!"),     // 세미콜론 아님
         Ordering::Greater=>println!("Too big!"),
-        Ordering::Equal=>println!("You wint!"),
+        Ordering::Equal=>println!("You win!"),
     }
 }
