@@ -26,7 +26,10 @@ fn main() {
             // 숫자 비교
             Ordering::Less => println!("Too small!"), // 세미콜론 아님
             Ordering::Greater => println!("Too big!"),
-            Ordering::Equal => println!("You win!"),
+            Ordering::Equal => {
+                println!("You win!");
+                break;
+            }
         }
     }
 }
