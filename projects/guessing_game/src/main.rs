@@ -18,7 +18,10 @@ fn main() {
             .expect("Failed to read line");
 
         // 타입 변경
-        let guess: u32 = guess.trim().parse().expect("Please type a number!");
+        let guess: u32 = guess.trim().parse(){ //유효하지 않은 값 처리
+            Ok(num) => num,
+            Err(_) => continue,
+        }
 
         println!("You guessed: {}", guess);
 
