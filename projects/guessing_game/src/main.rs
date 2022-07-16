@@ -7,7 +7,8 @@ fn main() {
 
     let secret_number = rand::thread_rng().gen_range(1..101);
 
-    println!("The secret number is {}", secret_number);
+    //println!("The secret number is {}", secret_number);
+    
     loop {
         println!("Please input your guess.");
 
@@ -18,10 +19,10 @@ fn main() {
             .expect("Failed to read line");
 
         // 타입 변경
-        let guess: u32 = guess.trim().parse(){ //유효하지 않은 값 처리
+        let guess: u32 = match guess.trim().parse(){ //유효하지 않은 값 처리
             Ok(num) => num,
             Err(_) => continue,
-        }
+        };
 
         println!("You guessed: {}", guess);
 
