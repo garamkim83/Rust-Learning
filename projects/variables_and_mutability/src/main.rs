@@ -15,4 +15,9 @@ fn main() {
     }
 
     println!("The value of y is {}", y);
+
+    let spaces = "    ";
+    println!("{}", spaces);
+    let spaces = spaces.len();
+    println!("{}",spaces);
 }
