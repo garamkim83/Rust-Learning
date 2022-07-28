@@ -30,4 +30,14 @@ fn main() {
     let z: f32 = 3.0; //float type
     let is_true: bool = false; //boolean
     let c = 'z'; //character
+
+    //the compound type
+    let tup: (i32, f64, u8) = (500, 6.4, 1); //the tuple type
+    let (t1, t2, t3) = tup;
+    println!("The value of t2 is: {}", t2);
+
+    let five_hundred = tup.0; //val.index로 튜플의 각 요소에 접근 가능
+    let six_point_four = tup.1;
+    let one = tup.2;
+    println!("{}, {}, {}", five_hundred, six_point_four, one);
 }
