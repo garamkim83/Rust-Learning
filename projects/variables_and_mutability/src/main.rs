@@ -24,5 +24,10 @@ fn main() {
     let spaces = "    ";
     println!("{}", spaces);
     let spaces = spaces.len();
+    //spaces = spaces.len(); 는 자료형이 달라서 안 됨
     println!("{}", spaces);
+
+    let z: f32 = 3.0; //float type
+    let is_true: bool = false; //boolean
+    let c = 'z'; //character
 }
