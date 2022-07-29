@@ -40,4 +40,25 @@ fn main() {
     let six_point_four = tup.1;
     let one = tup.2;
     println!("{}, {}, {}", five_hundred, six_point_four, one);
+
+    //the array type
+    let a = [1, 2, 3, 4, 5];
+    let months = [
+        "January",
+        "Fabruary",
+        "March",
+        "April",
+        "May",
+        "June",
+        "july",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    ];
+    let a: [i32; 5] = [1, 2, 3, 4, 5]; //type: i32 & 5 elements
+    println!("The array a[1] is {}", a[1]);
+    let a = [3; 5];
+    println!("The array a[1] is {}", a[1]);
 }
