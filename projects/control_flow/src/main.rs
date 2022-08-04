@@ -17,4 +17,9 @@ fn main() {
     } else {
         println!("number is not divisible by 4, 3, 2");
     }
+
+    //using if in a let statement
+    let condition = true;
+    let number = if condition { 5 } else { 6 }; //if와 else의 반환형은 같아야 함
+    println!("The value of number is: {}", number);
 }
