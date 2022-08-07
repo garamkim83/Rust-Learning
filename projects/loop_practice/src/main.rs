@@ -36,7 +36,7 @@ fn main() {
     }
     println!("LIFTOFF!!!");
 
-    //conditinal loops with while 1
+    //conditinal loops with while 2
     let a = [10, 20, 30, 40, 50];
     let mut index = 0;
     while index < 5 {
@@ -49,4 +49,10 @@ fn main() {
     for element in a {
         println!("The value is: {}", element);
     }
+    
+    //1~3을 역순으로 출력
+    for num in (1..4).rev() {       
+        println!("{}", num);
+    }
+    println!("LIFTOFF!!!");
 }
