@@ -22,4 +22,27 @@ fn main() {
     let mut s = String::from("hello");
     s.push_str(", world!"); //push_str() appends a literal to a string
     println!("{}", s); //This will print 'hello, world!'
+
+    //Ways variables and data interact: Move
+    {
+        let x = 5;
+        let y = x; //x와 y의 5라는 값이 모두 stack에 쌓인다
+    }
+    {
+        let s1 = String::from("hello");
+        let s2 = s1;
+        //s1과 s2에 있는 값이 각각 stack에 쌓이지 않음
+        //대신 s1에 있는 값이 s2로 이동
+        //이를 통해 메모리 절약
+
+        //println!("{}, world!", s1); -> 이동된 값이므로 에러 발생
+    }
+
+    //Ways variables and data interact: Clone
+    {
+        let s1 = String::from("hello");
+        let s2 = s1.clone();
+
+        println!("s1: {}, s2: {}", s1, s2);
+    }
 }
