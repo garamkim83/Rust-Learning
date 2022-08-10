@@ -25,10 +25,6 @@ fn main() {
 
     //Ways variables and data interact: Move
     {
-        let x = 5;
-        let y = x; //x와 y의 5라는 값이 모두 stack에 쌓인다
-    }
-    {
         let s1 = String::from("hello");
         let s2 = s1;
         //s1과 s2에 있는 값이 각각 stack에 쌓이지 않음
@@ -44,5 +40,12 @@ fn main() {
         let s2 = s1.clone();
 
         println!("s1: {}, s2: {}", s1, s2);
+    }
+
+    //Stack only Data: Copy
+    //integer, boolean, floating point, character, tuple only
+    {
+        let x = 5;
+        let y = x; //x와 y의 5라는 값이 모두 stack에 쌓인다
     }
 }
