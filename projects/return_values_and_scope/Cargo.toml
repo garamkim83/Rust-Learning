@@ -1,5 +1,5 @@
 [package]
-name = "return_valuese_and_scope"
+name = "return_values_and_scope"
 version = "0.1.0"
 edition = "2021"
 
