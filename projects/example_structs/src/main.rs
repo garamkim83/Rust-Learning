@@ -31,6 +31,7 @@ fn area(demensions: (u32,u32)) -> u32 {
 */
 
 //Refectoring with Structs
+/*
 struct Rectangle {
     width: u32,
     height: u32,
@@ -50,4 +51,36 @@ fn main() {
 
 fn area(rectangle: &Rectangle) -> u32 {
     rectangle.width * rectangle.height
+}
+*/
+
+//adding useful functionality with derived traits
+/*
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+fn main() {
+    let rect1 = Rectangle {
+        width: 30,
+        height: 50,
+    };
+    println!("rect1 is {:?}", rect1);
+}
+*/
+
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+fn main() {
+    let scale = 2;
+    let rect1 = Rectangle {
+        width: dbg!(30 * scale),
+        height: 50,
+    };
+    dbg!(&rect1);
 }
