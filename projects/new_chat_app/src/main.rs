@@ -2,6 +2,8 @@
 // https://github.com/SergioBenitez/Rocket/blob/v0.5-rc/examples/chat/src/main.rs
 // https://www.youtube.com/watch?v=NS9Dh63i_Q4
 
+//같은 컴퓨터의 여러 브라우저 창을 통해 채팅할 수 있는 사이트
+
 #[macro_use]
 extern crate rocket;
 
